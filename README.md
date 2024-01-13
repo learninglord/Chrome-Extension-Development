@@ -9,3 +9,11 @@ Being able to spin up extension for any good usecases at the sping of a hand is 
 
 ### Version 1.1
 This kind of console log work only when clicking on popup and inspecting it.
+
+### Version 1.2
+Gave this project a structure.
+- Images 
+- Popup HTML/CSS/JS files
+- Scripts
+
+Note: Only manifest file changes require reload. Any changes to html or script files are auto picked without reload
