@@ -39,3 +39,15 @@ Expanded Reading Time extension to Github
 
 #### Version 2.3
 Expanded Reading Time extension to Medium
+
+## Version 3
+Extension list
+- Hello popup
+- Reading Time
+- Focus Mode
+
+### Version 3.1
+Developed Focus Mode extension for chrome docs
+
+### Version 3.2
+Expanded Focus Mode extension to Github

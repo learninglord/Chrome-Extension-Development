@@ -9,3 +9,13 @@ main > :last-child {
   margin-top: min(10vmax, 10rem);
   margin-bottom: min(10vmax, 10rem);
 }
+
+
+.focus-hide {
+  display: none;
+  width: 0%;
+}
+
+.Layout.Layout-side-bar-hide {
+  --Layout-sidebar-width: 0px;
+}

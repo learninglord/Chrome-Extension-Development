@@ -24,5 +24,11 @@
                 "mac": "Command+B"
             }
         }
-    }
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://github.com/*"],
+            "js": ["scripts/content-script.js"]
+        }
+    ]
 }
