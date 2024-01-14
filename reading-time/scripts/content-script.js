@@ -1,7 +1,4 @@
-const article = document.querySelector("article");
-
-// document.querySelect can return null if nothing matches
-if (article) {
+function getReadinTime(article) {
     const text = article.textContent
     const wordMatchRegex = /[^\s]+/g // Word match Regular expression
 
@@ -14,11 +11,20 @@ if (article) {
     const wordCount = words.length
 
     // Reading speed est
-    const readingTime = Math.round(wordCount/200)
+    return Math.round(wordCount/200)
+}
+
+const article = document.querySelector("article")
+
+// document.querySelect can return null if nothing matches
+if (article) {
+    // debugger;
+    console.log('Reading time estimation In Progress');
 
     const badge = document.createElement("p")
     badge.classList.add("color-secondary-text", "type--caption")
-    badge.textContent = `⏱️ ${readingTime} min read for a dimwit`;
+    badge.textContent = `⏱️ ${getReadinTime(article)} min read for a dimwit`;
+    console.log('Reading time estimation Complete');
 
     // Support for API reference docs
     // const docs = article.querySelector("h1");
@@ -26,4 +32,5 @@ if (article) {
     // const date = article.querySelector("time")?.parentNode;
 
     article.insertAdjacentElement("afterbegin", badge);
+    console.log('Reading time element appended to page');
 }

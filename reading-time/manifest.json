@@ -5,6 +5,7 @@
     "description": "Add reading time for a page.",
     "icons": {
         "16": "images/hi_16x16.png",
+        "128": "images/reading.png",
         "225": "images/groot_225x225.png"
     },
     "content_scripts": [
@@ -14,7 +15,8 @@
             ],
             "matches": [
                 "https://developer.chrome.com/docs/*",
-                "https://github.com/*"
+                "https://github.com/*",
+                "https://medium.com/*"
             ]
         }       
     ]
