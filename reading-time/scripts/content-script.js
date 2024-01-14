@@ -5,8 +5,13 @@ if (article) {
     const text = article.textContent
     const wordMatchRegex = /[^\s]+/g // Word match Regular expression
 
-    const words = text.matchAll(wordMatchRegex); // all word matches
-    const wordCount = [words].length
+    // Opt 1:
+    // const words = text.matchAll(wordMatchRegex); // all word matches
+    // const wordCount = [...words].length
+    
+    // Opt 2: 
+    const words = text.match(wordMatchRegex); // all word matches
+    const wordCount = words.length
 
     // Reading speed est
     const readingTime = Math.round(wordCount/200)
@@ -16,9 +21,9 @@ if (article) {
     badge.textContent = `⏱️ ${readingTime} min read for a dimwit`;
 
     // Support for API reference docs
-    const docs = article.querySelector("h1");
+    // const docs = article.querySelector("h1");
     // Support for article docs with date
-    const date = article.querySelector("time")?.parentNode;
+    // const date = article.querySelector("time")?.parentNode;
 
-    (docs ?? date).insertAdjacentElement("afterend", badge);
+    article.insertAdjacentElement("afterbegin", badge);
 }
