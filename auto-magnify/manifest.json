@@ -1,0 +1,36 @@
+{
+    "manifest_version": 3,
+    "name": "Auto Magnify",
+    "description": "Maginfies Manga and other other websites automatically",
+    "version": "1.0",
+    "icons": {
+        "16": "images/magnifier-16.png",
+        "64": "images/magnifier-64.png",
+        "120": "images/magnifier-120.png"
+    },
+    "action": {
+        "default_icon": {
+            "16": "images/magnifier-16.png",
+            "64": "images/magnifier-64.png",
+            "120": "images/magnifier-120.png"
+        }
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["scripts/content-script.js"]
+        }
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "commands": {
+        "_execute_action": {
+            "suggested_key": {
+                "default": "Ctrl+M",
+                "mac": "Command+M"
+            }
+        }
+    },
+    "permissions": ["activeTab", "scripting", "webNavigation"]
+}
